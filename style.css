@@ -1,22 +1,25 @@
-*{    
-margin: 0;
-padding: 0;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-a{
+a {
     color: #fff;
     text-decoration: none;
     transition: 0.3s;
 }
-a:hover{
+
+a:hover {
     opacity: 0.7;
 }
-.logo{
+
+.logo {
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 4px;
 }
-nav{
+
+nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -24,45 +27,48 @@ nav{
     background: #696969;
     height: 10vh;
 }
-body{
+
+body {
     background: url(imagens/academia.jpeg) repeat center center;
     background-size: cover;
-    background-position: 100%;
-    overflow-x: hidden;
 }
-.menu{
+
+.menu {
     list-style: none;
     display: flex;
 }
-.menu li{
+
+.menu li {
     letter-spacing: 3px;
     margin-left: 32px;
 }
+
 .dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-.dropdown-content{
+}
+
+.dropdown-content {
     list-style: none;
     display: none;
     position: absolute;
-    background-color: #3d3030;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
+    background-color: #696969;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 10px 14px;
     z-index: 0;
-  }
-  
-.dropdown:hover .dropdown-content{
-    display: block;
-  }
+}
 
-.mobile-menu{
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.mobile-menu {
     display: none;
     cursor: pointer;
 }
-.mobile-menu div{
+
+.mobile-menu div {
     width: 32px;
     height: 2px;
     background: #fff;
@@ -72,59 +78,70 @@ body{
 
 @media (max-width: 800px) {
     body {
-      overflow-x: hidden;
+        background: url(imagens/academia2.jpeg) repeat center center;
+        background-size: cover;
     }
+
     .menu {
-      position: absolute;
-      top: 8vh;
-      right: 0;
-      width: 50vw;
-      height: 90vh;
-      background: #696969;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in;
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 90vh;
+        background: #696969;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
     }
+
     .menu li {
-      margin-left: 0;
-      opacity: 0;
+        margin-left: 0;
+        opacity: 0;
     }
+
     .mobile-menu {
-      display: block;
+        display: block;
     }
-  }
-  
-  .menu.active {
+}
+
+.menu.active {
     transform: translateX(0);
-  }
-  
+}
+
 @keyframes navLinkFade {
     from {
-      opacity: 0;
-      transform: translateX(50px);
+        opacity: 0;
+        transform: translateX(50px);
     }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  .mobile-menu.active .line1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
-  }
-  
-  .mobile-menu.active .line2 {
-    opacity: 0;
-  }
-  
-  .mobile-menu.active .line3 {
-    transform: rotate(45deg) translate(-5px, -7px);
-  }
-@media (max-width: 450px){
 
-    .container{
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+@media (max-width: 450px) {
+    body {
+        overflow-x: hidden;
+        background: url(imagens/academia2.jpeg) repeat center center;
+        background-size: cover;
+    }
+
+    .container {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -132,16 +149,18 @@ body{
         height: auto;
         margin: auto;
     }
-    .container     img{
-        max-width: 300px;
+
+    .container img {
+        max-width: 100%;
         margin: 10px;
     }
-    .fontes{
+
+    .fontes {
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        height: 250px;
+        height: 100px;
         width: 50%;
         margin: 50px auto;
         border: 5px solid #C0C0C0;
@@ -149,9 +168,88 @@ body{
         color: #C0C0C0;
         padding: 10px;
     }
+
+    .fontes h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fontes p {
+        color: #C0C0C0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px -15px 10px -5px;
+        background-color: #4F4F4F;
+        border-radius: 10%;
+        padding: 0;
+    }
+
+    .container-formulario {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        height: 80vh;
+    }
+
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        background-color: #696969;
+        border-radius: 8px;
+        width: 400px;
+    }
+
+    .formulario .titulo {
+        padding: 24px 32px;
+        font-size: 24px;
+        border-bottom: thin solid #696969;
+    }
+
+    .formulario form {
+        display: flex;
+        align-items: start;
+        flex-wrap: wrap;
+        padding: 32px;
+    }
+
+    .formulario input {
+        width: calc(50% - 8px);
+        height: 32px;
+        border-radius: 8px;
+        border: thin solid #3d3030;
+        padding-left: 16px;
+        margin-bottom: 16px;
+        font-size: 10px;
+    }
+
+    .formulario input:first-child {
+        margin-right: 16px;
+    }
+
+    .formulario button {
+        display: block;
+        border: none;
+        outline: none;
+        width: 140px;
+        height: 38px;
+        border-radius: 8px;
+        background-color: #1C1C1C;
+        color: #A9A9A9;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .formulario button:hover {
+        background-color: #4F4F4F;
+    }
 }
 
-.container{
+.container {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -160,80 +258,91 @@ body{
     border-radius: 1%;
     background-color: #3d3030;
 }
-.titulo-bene{
-    border-radius: 10%;
-    color: #C0C0C0;
-    background-color: #4F4F4F;
-}
-.beneficios{
-    color: #C0C0C0;
-}
-.titulo-exercicios{
+
+.titulo-exercicios {
     display: flex;
     justify-content: center;
     color: #A9A9A9;
     font-size: 300%;
     margin: 0px 50px auto;
 }
-.titulo-exercicio{
-    color: 	#D3D3D3;
+
+.titulo-exercicio {
+    color: #D3D3D3;
     border-radius: 10%;
     background-color: #1C1C1C;
     font-size: 300%;
     margin: 10px 50px;
 }
-.exerc{
+
+.exerc {
     color: #C0C0C0;
     display: flex;
     align-items: center;
-    height: 100px;
     width: 100%;
     margin: 10px 50px;
     padding: 0;
     font-size: 130%;
 }
-img{
+
+img {
     max-width: 400px;
     max-height: 270px;
     margin: 25px auto;
 
 }
-.fontes{
+
+.fontes {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     height: 150px;
-    width: 50%;
+    width: 75%;
     margin: 50px auto;
     border: 5px solid #C0C0C0;
     background-color: #3d3030;
     color: #C0C0C0;
     padding: 10px;
 }
-.fontes h1{
+
+.fontes h1 {
     display: flex;
     align-items: center;
-    font-size: 150%;
+    font-size: 100%;
     letter-spacing: 2px;
     background-color: #4F4F4F;
     border-radius: 10%;
     color: #C0C0C0;
 }
-.fontes p{
+
+.fontes p {
     color: #C0C0C0;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin: 5px -15px 10px -5px;
     background-color: #4F4F4F;
     border-radius: 10%;
     padding: 0;
 }
 
-.fontes-links a{
+.fontes h2 {
+    display: flex;
+    align-items: center;
+    font-size: 100%;
+    letter-spacing: 2px;
+    background-color: #4F4F4F;
+    border-radius: 10%;
+    color: #C0C0C0;
+}
+
+.fontes-links a {
     border-radius: 10%;
     color: #696969;
 }
-.container-formulario{
+
+.container-formulario {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -241,25 +350,29 @@ img{
     width: 100%;
     height: 80vh;
 }
-.formulario{
+
+.formulario {
     display: flex;
     flex-direction: column;
     background-color: #696969;
     border-radius: 8px;
     width: 600px;
 }
-.formulario .titulo{
+
+.formulario .titulo {
     padding: 24px 32px;
     font-size: 24px;
     border-bottom: thin solid #696969;
 }
-.formulario form{
+
+.formulario form {
     display: flex;
     align-items: start;
     flex-wrap: wrap;
     padding: 32px;
 }
-.formulario input{
+
+.formulario input {
     width: calc(50% - 8px);
     height: 48px;
     border-radius: 8px;
@@ -268,10 +381,12 @@ img{
     margin-bottom: 16px;
     font-size: 16px;
 }
-.formulario input:first-child{
+
+.formulario input:first-child {
     margin-right: 16px;
 }
-.formulario button{
+
+.formulario button {
     display: block;
     border: none;
     outline: none;
@@ -284,10 +399,12 @@ img{
     font-weight: bold;
     cursor: pointer;
 }
-.formulario button:hover{
+
+.formulario button:hover {
     background-color: #4F4F4F;
 }
-.rodape{
+
+.rodape {
     position: fixed;
     bottom: 0;
     width: 100%;
